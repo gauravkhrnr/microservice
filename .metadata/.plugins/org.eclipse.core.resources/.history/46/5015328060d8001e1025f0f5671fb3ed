@@ -1,0 +1,13 @@
+package com.demo.microservices.currencyconversionservice.client;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import com.demo.microservices.currencyconversionservice.CurrencyConversionBean;
+
+//Create proxy interface
+@FeignClient(name="currency-exchange-service", url="localhost:8000")  
+public interface CurrencyExchangeServiceClient {
+	@GetMapping("/currency-exchange/from/{from}/to/{to}") 
+	public CurrencyConversionBean convertCurrencyFeign(@PathVariable String from, @PathVariable String to);
+}

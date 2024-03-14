@@ -1,0 +1,5 @@
+package com.demo.microservices.currencyconversionservice.client;
+
+public class CurrencyExchangeServiceProxy {
+
+}
