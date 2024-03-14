@@ -1,5 +1,0 @@
-package com.demo.microservices.currencyconversionservice.request;
-
-public class ExchangeValue {
-
-}
